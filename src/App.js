@@ -5,7 +5,10 @@ import './App.css';
 function App() {
   const [task,setTaks] = useState('');
   const [tasks,addTask] = useState([]);
-
+  const Add = (tas) => {
+    addTask(tasks.append(tas))
+    console.log(tasks)
+  }
   return (
     <div className='App'>
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -15,7 +18,7 @@ function App() {
       <div className='Box'>
         <h2 className='title'>Do It TodoList !!!</h2>
         <div style={{height: '70px'}}>
-        <input className='inpt' name='todo' value={task} onChange={(e)=>setTaks(e.target.value)} /><button className='add'>Add +</button>
+        <input className='inpt' name='todo' value={task} onChange={(e)=>setTaks(e.target.value)} /><button onClick={()=>{Add(task)}} className='add'>Add +</button>
         </div>
         <div className='task'><p>Task 1 : Meeting </p><button className='fas fa-trash-alt'></button></div>
       </div>
