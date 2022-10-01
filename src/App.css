@@ -40,6 +40,12 @@
   height: 50px;
   border: 1px solid rgb(189, 189, 189);
   border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.inpt:focus {
+  outline: none;
 }
 .add {
   background: rgb(255, 43, 191);
@@ -52,6 +58,33 @@
   border-radius: 5px;
 }
 .add:hover {
+  transition: 1s;
+  cursor: pointer;
+}
+.task {
+  width: 100%;
+  height: 10%;
+  background-color: #d2d2d2;
+}
+.task p {
+  font-family: 'Poppins';
+  font-size: 18px;
+  width: 70%;
+  margin-top: 20px;
+  margin-left: 20px;
+  float: left;
+}
+.task button {
+  float: right;
+  width: 20%;
+  height: 100%;
+  background:red;
+  color: white;
+  border: none;
+  font-size: 24px;
+  text-align: center;
+}
+.task button:hover {
   transition: 1s;
   cursor: pointer;
 }
