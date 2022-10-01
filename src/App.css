@@ -1,38 +1,57 @@
+@font-face {
+  font-family: 'kaisen';
+  src: url('../src/assets/fonts/Kaizen.otf');
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: absolute;
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right bottom,rgb(2, 40, 255),rgb(16, 248, 237));
+
+}
+.Box {
+  margin-top: 5%;
+  margin-left: 25%;
+  height: 80%;
+  width: 50%;
+  align-self: center;
   align-items: center;
+  background: white;
+  color: black;
+  font-family: 'Poppins',sans-serif;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.title {
+  margin-top: 0;
+  justify-content: center;
+  text-align: center;
+  font-family: 'kaisen';
+  font-size: 28px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(189, 189, 189);
+  box-shadow: 0px 10px 20px .2px grey;
+}
+.inpt {
+  float: left;
+  margin-left: 10%;
+  width: 60%;
+  height: 50px;
+  border: 1px solid rgb(189, 189, 189);
+  border-radius: 5px;
+}
+.add {
+  background: rgb(255, 43, 191);
+  height: 50px;
+  width: 20%;
+  margin-left: 5%;
+  border: none;
+  font-size: 20px;
   color: white;
+  border-radius: 5px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add:hover {
+  transition: 1s;
+  cursor: pointer;
 }
