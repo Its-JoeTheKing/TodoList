@@ -14,6 +14,8 @@
   margin-top: 5%;
   margin-left: 25%;
   height: 80%;
+  max-height: 80%;
+  overflow: auto;
   width: 50%;
   align-self: center;
   align-items: center;
@@ -21,6 +23,7 @@
   color: black;
   font-family: 'Poppins',sans-serif;
   justify-content: center;
+
 }
 .title {
   margin-top: 0;
@@ -65,6 +68,11 @@
   width: 100%;
   height: 10%;
   background-color: #d2d2d2;
+  margin-bottom: 2px;
+
+}
+.task:nth-child(odd) {
+  background: rgb(105, 104, 104);
 }
 .task p {
   font-family: 'Poppins';

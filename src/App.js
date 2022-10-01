@@ -6,8 +6,13 @@ function App() {
   const [task,setTaks] = useState('');
   const [tasks,addTask] = useState([]);
   const Add = (tas) => {
-    addTask(tasks.append(tas))
-    console.log(tasks)
+    if (tas !== '') {
+      addTask(tasks => [...tasks,tas])
+      setTaks('')
+    }
+  }
+  const Del = (i) => {
+    setTaks(tasks.splice(i,1))
   }
   return (
     <div className='App'>
@@ -20,7 +25,11 @@ function App() {
         <div style={{height: '70px'}}>
         <input className='inpt' name='todo' value={task} onChange={(e)=>setTaks(e.target.value)} /><button onClick={()=>{Add(task)}} className='add'>Add +</button>
         </div>
-        <div className='task'><p>Task 1 : Meeting </p><button className='fas fa-trash-alt'></button></div>
+        {
+          tasks.map((i,k)=>{
+          return <div className='task'><p>{i}</p><button onClick={()=>{Del(k)}} className='fas fa-trash-alt'></button></div>
+          })
+        }
       </div>
     </div>
   );
